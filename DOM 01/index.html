@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Plantilla javaScript</title>
+	<meta charset="utf-8" />  
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<script src="js/miscript.js"></script>
+</head>
+<body>
+<header>
+	<h1>Repaso javaScript</h1>
+</header>
+<form name="examen" action="" method="post">
+<fieldset id="eje01">
+	<legend>Ejercicio 1: Hacer las operaciones con los números introducidos y mostrar el resultado en la pantalla</legend>
+	<input type="text" name="num1_eje01" id="num1_eje01" placeholder="Número 1">
+	<span id="operacion"></span>
+	<input type="text" name="num2_eje01" id="num2_eje01" placeholder="Número 2">
+	<button type="button" onclick="suma()">Sumar</button>
+	<button type="button" onclick="resta()">Restar</button>
+	<button type="button" onclick="moltiplica()">Multiplicar</button>
+	<button type="button" onclick="divide()">Dividir</button>
+	<span>Resultado:</span><span  id="resultado1" class="resultado"></span>
+</fieldset>
+<fieldset id="eje02">
+	<legend>Ejercicio 2: Introducir un número. Mostrar el resultado en pantalla. Poner el fondo del resultado en rojo si es negativo o verde si es positivo</legend>
+	<input type="text" name="num1_eje02" id="num1_eje02" placeholder="Número">
+	<button type="button" onclick="valorar()">¿Es positivo o negativo?</button>
+	<span>Resultado:</span><span id="resultado2" class="resultado"></span>
+</fieldset>
+<fieldset id="eje03">
+	<legend>Ejercicio 3: Introducir una distancia en millas marinas y calcularla en metros, sabiendo que una milla náutica son 1852 metros</legend>
+	<input type="text" name="num1_eje03" id="num1_eje03" placeholder="Millas marinas">
+	<button type="button" onclick="calcular()">Calcular los metros</button>
+	<span>Resultado:</span><span id="resultado3" class="resultado"></span>
+</fieldset>
+<fieldset id="eje04">
+	<legend>Ejercicio 4: Poner el texto introducido en la casilla de resultado en mayúsculas o minúscula dependiendo del botón clicado</legend>
+	<input type="text" name="texto_eje04" id="texto_eje04" placeholder="Escribe un texto">
+	<button type="button" onclick="convertirtxt(this)" name="mayu">Mayúsculas</button>
+	<button type="button" onclick="convertirtxt(this)" name="min">Minúsculas</button>
+	<span>Resultado:</span><span id="resultado4" class="resultado"></span>
+</fieldset>
+<fieldset id="eje05">
+	<legend>Ejercicio 5: Reemplazar "don Quijote" por "el ingenioso hidalgo" y ponerlo en negrita</legend>
+	<p id="donq">Don Quijote le dice al labrador que es un cobarde por reñir a quien no puede defenderse y el labrador le explica que le está castigando por no cuidar bien a su manada de ovejas y porque el joven dice que le debe dinero. Don Quijote le exige al labrador que le pague la deuda a su criado. El labrador le responde que Andrés tendrá que ir con él a su casa porque no trae el dinero que le debe. Sin embargo, Andrés no quiere ir con su amo porque dice que no es un caballero y que una vez que don Quijote se vaya, volverá a maltratarlo.</p>
+	<button type="button" onclick="reemplazar()">Reemplazar "don Quijote" por "el ingenioso hidalgo" y ponerlo en negrita</button>
+	<p>Resultado:</p>
+	<p id="resultado5" class="resultado"></p>
+</fieldset>
+<fieldset id="eje06">
+	<legend>Ejercicio 6: Comprobar si es un correo el texto introducido mirando si tiene una @ y un . (punto)</legend>
+	<input type="text" name="texto_eje06" id="texto_eje06" placeholder="Escribe un texto">
+	<button type="button" onclick="comprobar()">Comprobar si es correo</button>
+	<span>Resultado:</span><span id="resultado6" class="resultado"></span>
+</fieldset>
+
+<fieldset id="eje07">
+	<legend>Ejercicio 7:Cambiar el texto del check y del radio cuando se seleccione y poner su valor</legend>
+	<input type="checkbox" name="chk1" value="valor" onclick="spunta(this)"><span id="chk1">Haz clic sobre mi!</span>
+	<input type="radio" name="rd1" value="1" onclick="radios(this)" id="rd1"><span id="rd1txt">Haz clic sobre mi!</span>
+	<input type="radio" name="rd1" value="2" onclick="radios(this)" id="rd2"><span id="rd2txt">Haz clic sobre mi!</span>
+	</fieldset>
+<fieldset id="eje08">
+	<legend>Ejercicio 8:Crear un tablero de ajedrez poniendo el fondo de los cuadrados impares en negro y los pares en blanco</legend>
+	<div id="cuadricula" onmouseover="colorea()" onmousedown="recolorea()" onmouseup="colorea()">
+		<div class="cuadrado"></div>
+		<div class="cuadrado"></div>
+		<div class="cuadrado"></div>
+		<div class="cuadrado"></div>
+		<div class="cuadrado"></div>
+		<div class="cuadrado"></div>
+		<div class="cuadrado"></div>
+		<div class="cuadrado"></div>
+		<div class="cuadrado"></div>		
+	</div>
+</fieldset>
+<fieldset id="eje9">
+	<legend>Ejercicio 9: Escribir la sucesión de Fibonacci en los cuadrados</legend>
+	<p><i>La sucesión de Fibonacci empieza con 0 y 1 y los siguientes números equivalen a la suma de los dos números anteriores: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144</i></p>
+	<div id="sucesion" onclick="fibonacci()">
+		<div class="cuadrado"></div>
+		<div class="cuadrado"></div>
+		<div class="cuadrado"></div>
+		<div class="cuadrado"></div>
+		<div class="cuadrado"></div>
+		<div class="cuadrado"></div>
+		<div class="cuadrado"></div>
+		<div class="cuadrado"></div>
+		<div class="cuadrado"></div>
+		<div class="cuadrado"></div>
+		<div class="cuadrado"></div>
+		<div class="cuadrado"></div>
+		<div class="cuadrado"></div>	
+	</div>
+</fieldset>
+
+
+
+</form>
+	
+</body>
+</html>
